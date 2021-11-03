@@ -12,11 +12,12 @@ import br.com.alura.ceep.ui.coffemachine.exceptions.BadRequestException
 import br.com.alura.ceep.ui.coffemachine.exceptions.NoContentException
 import br.com.alura.ceep.ui.coffemachine.exceptions.NotFoundException
 import br.com.alura.ceep.ui.desafioandroid.R
-import br.com.alura.ceep.ui.desafioandroid.viewmodel.config.ExamViewModelFactory
-import br.com.alura.ceep.ui.desafioandroid.presentation.custom.ExamAdapter
 import br.com.alura.ceep.ui.desafioandroid.helpers.RetrofitConfig
+import br.com.alura.ceep.ui.desafioandroid.presentation.custom.ExamAdapter
 import br.com.alura.ceep.ui.desafioandroid.repository.ExamRepository
 import br.com.alura.ceep.ui.desafioandroid.viewmodel.ExamViewModel
+import br.com.alura.ceep.ui.desafioandroid.viewmodel.config.ExamViewModelFactory
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     fun observers() {
         viewModel.list.observe(this) { exams ->
+            recyclerView.adapter = examAdapter
             recyclerView.visibility = View.VISIBLE
             progressBar.visibility = View.GONE
             examAdapter.list.clear()
