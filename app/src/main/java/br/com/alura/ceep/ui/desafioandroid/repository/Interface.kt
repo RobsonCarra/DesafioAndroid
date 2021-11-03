@@ -9,9 +9,6 @@ interface Interface {
     @GET(GET_ALL)
     fun getAll(): Deferred<Response<List<User>>>
 
-//    @GET("v1/results/")
-//    fun getByUid(@Path("id") id: String): Deferred<Response<User>>
-
     companion object {
         const val GET_ALL = "v1/results/"
     }
