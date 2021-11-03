@@ -14,11 +14,5 @@ class RetrofitConfig {
             .addConverterFactory(GsonConverterFactory.create())
             .client(
                 OkHttpClient.Builder().build()).build()
-                    // toda chamada que passa por aqui é verificada pelo auth interceptor
-//                    .addInterceptor(AuthInterceptor(context))
-                    // authenticar automaticamente recebe a chamada de 401 e trata de acordo com o que dentro dele
-//                    .authenticator(TokenAuthenticator())
-//            )
-
     }
 }
