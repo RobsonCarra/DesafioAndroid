@@ -7,8 +7,6 @@ import br.com.alura.ceep.ui.desafioandroid.viewmodel.UserViewModel
 
 class ViewModelFactory(
     private val repository: Repository,
-//    private val auth: FirebaseAuth,
-//    private val sharedPref: SharedPref
 ) :
     ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

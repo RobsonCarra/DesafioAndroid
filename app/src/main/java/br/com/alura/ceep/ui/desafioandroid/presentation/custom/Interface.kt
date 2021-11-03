@@ -13,6 +13,6 @@ interface Interface {
 //    fun getByUid(@Path("id") id: String): Deferred<Response<User>>
 
     companion object {
-        const val GET_ALL = "v1/results"
+        const val GET_ALL = "v1/results/"
     }
 }
