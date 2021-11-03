@@ -8,5 +8,5 @@ class Exam(
     var name: String,
     var doctor: String,
     var timestamp: Long,
-    var health: Boolean
+    var healthy: Boolean
 )
