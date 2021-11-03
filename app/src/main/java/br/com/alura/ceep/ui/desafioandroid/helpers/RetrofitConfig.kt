@@ -12,6 +12,7 @@ class RetrofitConfig {
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .addConverterFactory(GsonConverterFactory.create())
             .client(
-                OkHttpClient.Builder().build()).build()
+                OkHttpClient.Builder().build()
+            ).build()
     }
 }

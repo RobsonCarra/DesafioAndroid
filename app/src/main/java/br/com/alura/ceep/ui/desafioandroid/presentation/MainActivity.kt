@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         setup()
         observers()
         viewModel.getAll()
+        progressBar.visibility = View.VISIBLE
+        recyclerView.visibility = View.INVISIBLE
     }
 
 
@@ -53,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             when (exception) {
                 is NoContentException -> {
                     recyclerView.visibility = View.GONE
-                    progressBar.visibility = View.GONE
+                    progressBar.visibility = View.VISIBLE
                 }
                 is BadRequestException -> Toast.makeText(
                     this,
