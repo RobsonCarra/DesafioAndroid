@@ -4,7 +4,6 @@ import br.com.alura.ceep.ui.coffemachine.exceptions.BadGatewayException
 import br.com.alura.ceep.ui.coffemachine.exceptions.BadRequestException
 import br.com.alura.ceep.ui.coffemachine.exceptions.NoContentException
 import br.com.alura.ceep.ui.coffemachine.exceptions.NotFoundException
-import br.com.alura.ceep.ui.desafioandroid.presentation.custom.Interface
 import br.com.alura.ceep.ui.desafioandroid.domain.User
 import br.com.alura.ceep.ui.desafioandroid.helpers.Res
 import kotlinx.coroutines.flow.flow

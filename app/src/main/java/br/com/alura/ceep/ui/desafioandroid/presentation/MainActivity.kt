@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
-    private lateinit var Adapter: Adapter
+    private var adapter: Adapter = Adapter()
 
     private val viewModel: UserViewModel by viewModels {
         ViewModelFactory(
@@ -44,9 +44,9 @@ class MainActivity : AppCompatActivity() {
     fun observers() {
         viewModel.list.observe(this) { coffee ->
             recyclerView.visibility = View.VISIBLE
-            Adapter.list.clear()
-            Adapter.list.addAll(coffee)
-            Adapter.notifyDataSetChanged()
+            adapter.list.clear()
+            adapter.list.addAll(coffee)
+            adapter.notifyDataSetChanged()
             progressBar.visibility = View.GONE
         }
         viewModel.error.observe(this) { exception ->
