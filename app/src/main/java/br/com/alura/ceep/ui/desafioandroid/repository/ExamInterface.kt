@@ -5,7 +5,7 @@ import kotlinx.coroutines.Deferred
 import retrofit2.Response
 import retrofit2.http.GET
 
-interface Interface {
+interface ExamInterface {
     @GET(GET_ALL)
     fun getAll(): Deferred<Response<List<Exam>>>
 

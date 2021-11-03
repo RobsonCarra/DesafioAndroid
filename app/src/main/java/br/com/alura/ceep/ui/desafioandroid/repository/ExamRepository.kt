@@ -11,9 +11,9 @@ import retrofit2.Retrofit
 import java.lang.Exception
 import java.net.HttpURLConnection
 
-class Repository (private val client: Retrofit){
+class ExamRepository (private val client: Retrofit){
     suspend fun getAll() = flow {
-        val api = client.create(Interface::class.java)
+        val api = client.create(ExamInterface::class.java)
         val req = api.getAll()
         val res = req.await()
         when (res.code()) {

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.ceep.ui.desafioandroid.R
 import br.com.alura.ceep.ui.desafioandroid.domain.Exam
 
-class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class ExamViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     var exameNames: TextView
     var data: TextView

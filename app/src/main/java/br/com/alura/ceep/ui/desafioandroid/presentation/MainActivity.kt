@@ -12,21 +12,21 @@ import br.com.alura.ceep.ui.coffemachine.exceptions.BadRequestException
 import br.com.alura.ceep.ui.coffemachine.exceptions.NoContentException
 import br.com.alura.ceep.ui.coffemachine.exceptions.NotFoundException
 import br.com.alura.ceep.ui.desafioandroid.R
-import br.com.alura.ceep.ui.desafioandroid.viewmodel.config.ViewModelFactory
-import br.com.alura.ceep.ui.desafioandroid.presentation.custom.Adapter
+import br.com.alura.ceep.ui.desafioandroid.viewmodel.config.ExamViewModelFactory
+import br.com.alura.ceep.ui.desafioandroid.presentation.custom.ExamAdapter
 import br.com.alura.ceep.ui.desafioandroid.helpers.RetrofitConfig
-import br.com.alura.ceep.ui.desafioandroid.repository.Repository
-import br.com.alura.ceep.ui.desafioandroid.viewmodel.UserViewModel
+import br.com.alura.ceep.ui.desafioandroid.repository.ExamRepository
+import br.com.alura.ceep.ui.desafioandroid.viewmodel.ExamViewModel
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
-    private var adapter: Adapter = Adapter()
+    private var examAdapter: ExamAdapter = ExamAdapter()
 
-    private val viewModel: UserViewModel by viewModels {
-        ViewModelFactory(
-            Repository(
+    private val viewModel: ExamViewModel by viewModels {
+        ExamViewModelFactory(
+            ExamRepository(
                 RetrofitConfig().getClient()
             )
         )
@@ -47,9 +47,9 @@ class MainActivity : AppCompatActivity() {
         viewModel.list.observe(this) { exams ->
             recyclerView.visibility = View.VISIBLE
             progressBar.visibility = View.GONE
-            adapter.list.clear()
-            adapter.list.addAll(exams)
-            adapter.notifyDataSetChanged()
+            examAdapter.list.clear()
+            examAdapter.list.addAll(exams)
+            examAdapter.notifyDataSetChanged()
         }
         viewModel.error.observe(this) { exception ->
             when (exception) {

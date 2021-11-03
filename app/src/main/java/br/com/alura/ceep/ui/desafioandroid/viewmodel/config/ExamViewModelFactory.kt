@@ -2,17 +2,17 @@ package br.com.alura.ceep.ui.desafioandroid.viewmodel.config
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import br.com.alura.ceep.ui.desafioandroid.repository.Repository
-import br.com.alura.ceep.ui.desafioandroid.viewmodel.UserViewModel
+import br.com.alura.ceep.ui.desafioandroid.repository.ExamRepository
+import br.com.alura.ceep.ui.desafioandroid.viewmodel.ExamViewModel
 
-class ViewModelFactory(
-    private val repository: Repository,
+class ExamViewModelFactory(
+    private val examRepository: ExamRepository,
 ) :
     ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(UserViewModel::class.java)) {
+        if (modelClass.isAssignableFrom(ExamViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
-            return UserViewModel(repository) as T
+            return ExamViewModel(examRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
