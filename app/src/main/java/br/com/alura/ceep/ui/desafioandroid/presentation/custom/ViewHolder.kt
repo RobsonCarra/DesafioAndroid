@@ -4,7 +4,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.ceep.ui.desafioandroid.R
-import br.com.alura.ceep.ui.desafioandroid.domain.User
+import br.com.alura.ceep.ui.desafioandroid.domain.Exam
 
 class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -18,9 +18,9 @@ class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         data = itemView.findViewById(R.id.data)
     }
 
-    fun bind(user: User) {
-        exameNames.text = user.name
-        doctorName.text = user.doctor
-        data.text = user.timestamp.toString()
+    fun bind(exam: Exam) {
+        exameNames.text = exam.name
+        doctorName.text = exam.doctor
+        data.text = exam.timestamp.toString()
     }
 }

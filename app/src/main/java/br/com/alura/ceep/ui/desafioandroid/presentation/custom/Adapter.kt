@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.ceep.ui.desafioandroid.R
-import br.com.alura.ceep.ui.desafioandroid.domain.User
+import br.com.alura.ceep.ui.desafioandroid.domain.Exam
 
 class Adapter :
     RecyclerView.Adapter<ViewHolder>() {
-    var list = ArrayList<User>()
+    var list = ArrayList<Exam>()
     private var context: Context? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -36,20 +36,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setup()
-        observers()
         viewModel.getAll()
         progressBar.visibility = View.VISIBLE
-        recyclerView.visibility = View.INVISIBLE
+        recyclerView.visibility = View.GONE
+        observers()
     }
 
 
     fun observers() {
-        viewModel.list.observe(this) { coffee ->
+        viewModel.list.observe(this) { exams ->
             recyclerView.visibility = View.VISIBLE
-            adapter.list.clear()
-            adapter.list.addAll(coffee)
-            adapter.notifyDataSetChanged()
             progressBar.visibility = View.GONE
+            adapter.list.clear()
+            adapter.list.addAll(exams)
+            adapter.notifyDataSetChanged()
         }
         viewModel.error.observe(this) { exception ->
             when (exception) {
