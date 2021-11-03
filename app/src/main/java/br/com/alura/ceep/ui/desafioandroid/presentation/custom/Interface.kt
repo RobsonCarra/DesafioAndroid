@@ -1,4 +1,4 @@
-package br.com.alura.ceep.ui.desafioandroid
+package br.com.alura.ceep.ui.desafioandroid.presentation.custom
 
 import br.com.alura.ceep.ui.desafioandroid.domain.User
 import kotlinx.coroutines.Deferred

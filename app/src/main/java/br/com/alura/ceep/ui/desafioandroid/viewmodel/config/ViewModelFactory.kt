@@ -1,4 +1,4 @@
-package br.com.alura.ceep.ui.desafioandroid
+package br.com.alura.ceep.ui.desafioandroid.viewmodel.config
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

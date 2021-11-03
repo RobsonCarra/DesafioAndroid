@@ -1,8 +1,7 @@
-package br.com.alura.ceep.ui.desafioandroid.helpers
+package br.com.alura.ceep.ui.desafioandroid.presentation.custom
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.ceep.ui.desafioandroid.R

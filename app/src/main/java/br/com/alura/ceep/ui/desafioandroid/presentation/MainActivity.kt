@@ -12,8 +12,8 @@ import br.com.alura.ceep.ui.coffemachine.exceptions.BadRequestException
 import br.com.alura.ceep.ui.coffemachine.exceptions.NoContentException
 import br.com.alura.ceep.ui.coffemachine.exceptions.NotFoundException
 import br.com.alura.ceep.ui.desafioandroid.R
-import br.com.alura.ceep.ui.desafioandroid.ViewModelFactory
-import br.com.alura.ceep.ui.desafioandroid.helpers.Adapter
+import br.com.alura.ceep.ui.desafioandroid.viewmodel.config.ViewModelFactory
+import br.com.alura.ceep.ui.desafioandroid.presentation.custom.Adapter
 import br.com.alura.ceep.ui.desafioandroid.helpers.RetrofitConfig
 import br.com.alura.ceep.ui.desafioandroid.repository.Repository
 import br.com.alura.ceep.ui.desafioandroid.viewmodel.UserViewModel
